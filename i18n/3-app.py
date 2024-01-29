@@ -40,9 +40,7 @@ def root():
         Returns a rendered template of an
         HTML site
     """
-    return render_template('/3-index.html',
-                           title=get_translation('home_title'),
-                           heading=get_translation('home_header'))
+    return render_template('/3-index.html'),
 
 
 if __name__ == '__main__':
