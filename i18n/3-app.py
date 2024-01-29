@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ Basic Flask App """
 from flask import Flask, render_template, request
-from flask_babel import Babel, _ as get_translation
+from flask_babel import Babel
 
 
 class Config(object):
@@ -40,7 +40,7 @@ def root():
         Returns a rendered template of an
         HTML site
     """
-    return render_template('/3-index.html'),
+    return render_template('3-index.html'),
 
 
 if __name__ == '__main__':
