@@ -42,6 +42,7 @@ def root():
         Returns a rendered template of an
         HTML site
     """
+    from flask_babel import Babel, _ as get_translation
     return render_template('/4-index.html',
                            title=get_translation('home_title'),
                            heading=get_translation('home_header'))
