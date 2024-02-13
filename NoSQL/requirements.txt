@@ -1,0 +1,11 @@
+pycodestyle==2.5
+mypy
+flask
+flask_babel
+flask-cors
+pytz
+requests
+beautifulsoup4
+bcrypt
+parameterized
+pymongo==3.10
