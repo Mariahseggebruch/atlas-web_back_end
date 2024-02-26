@@ -1,11 +1,19 @@
-/* eslint-disable */
 const Utils = {
-    calculateNumber: (type, a, b) => {
-          const ops = {'SUM'     : (a, b) => Math.round(a) + Math.round(b),
-                       'SUBTRACT': (a, b) => Math.round(a) - Math.round(b),
-                       'DIVIDE'  : (a, b) => { if (Math.round(b) !== 0) return Math.round(a) / Math.round(b)
-                                               return 'Error'; }};
-          return ops[type](a, b);
+    calculateNumber(type, a, b) {
+      const numA = Math.round(a);
+      const numB = Math.round(b);
+  
+      switch (type) {
+        case 'SUM':
+          return numA + numB;
+        case 'SUBTRACT':
+          return numA - numB;
+        case 'DIVIDE':
+          return numB === 0 ? 'Error' : numA / numB;
+        default:
+          throw new Error('Unknown operation');
       }
-  }
+    }
+  };
+  
   module.exports = Utils;
